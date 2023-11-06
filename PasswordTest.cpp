@@ -1,6 +1,6 @@
 /**
  * Unit Tests for Password class
-**/
+ **/
 
 #include <gtest/gtest.h>
 #include "Password.h"
@@ -16,11 +16,17 @@ class PracticeTest : public ::testing::Test
 
 TEST(PasswordTest, smoke_test)
 {
-    ASSERT_TRUE( 1 == 1 );
+	ASSERT_TRUE( 1 == 1 );
 }
 TEST(PasswordTest, single_letter_password)
 {
-    Password my_password;
+	Password my_password;
 	int actual = my_password.count_leading_characters("Z");
 	ASSERT_EQ(1,actual);
+}
+TEST(PasswordTest, lower_case_password){
+
+	Password my_password;
+	bool verdict = my_password.has_mixed_case("case");
+	ASSERT_EQ(true,verdict);
 }

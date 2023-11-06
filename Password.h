@@ -15,5 +15,7 @@ public:
   'z' and any ASCII characters are allowed.
   */
   int count_leading_characters(string);
+  /*The function that checks if there are upper case and lower case present within the password*/
+  bool has_mixed_case(string);
 };
 #endif
