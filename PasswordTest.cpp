@@ -26,6 +26,6 @@ TEST(PasswordTest, single_letter_password)
 }
 TEST(PasswordTest, lower_case_password){
 	Password my_password;
-	bool verdict = my_password.has_mixed_case("case");
+	bool verdict = my_password.has_mixed_case("cAse");
 	ASSERT_EQ(true,verdict);
 }
